@@ -5,7 +5,6 @@ window.addEventListener('load', function () {
 
 	btns.forEach(el => el.addEventListener('click', (e) => btnActions(e.target.innerHTML)));
 	calcWindow.addEventListener('keydown', btnActive);
-	calcWindow.addEventListener('touchstart', btnActive);
 	calcWindow.addEventListener('input', function () {
 		calcWindow.value = calcWindow.value.replace(/[^\+\-\/\*\.\(\)\d]/g, '');
 		error.innerHTML = '';
