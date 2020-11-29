@@ -1,6 +1,7 @@
 # VeraNekarsova.Only.Calulator
 
 Установка
+
 Запустите установку пакетов npm:
 npm i
 
