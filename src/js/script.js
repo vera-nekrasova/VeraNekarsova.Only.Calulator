@@ -39,15 +39,13 @@ window.addEventListener('load', function () {
 	}
 
 	function btnActive(e) {
-		btns.forEach(el => {
-			if (e.key == el.dataset.role) {
-				el.animate([
-					{ background: '#a0ddff', color: '#624cab' },
-					{ background: '#7189ff', color: '#c1cefe' }
-				], 300);
-			}
-
-			if (e.key === 'Enter') btnAction('=');
-		});
+		let activeKey = document.querySelector(`.calc__btn[data-role='${e.key}']`);
+		if (activeKey) {
+			activeKey.animate([
+				{ background: '#a0ddff', color: '#624cab' },
+				{ background: '#7189ff', color: '#c1cefe' }
+			], 300);
+		}
+		if (e.key === 'Enter') btnActions('=');
 	}
 });
